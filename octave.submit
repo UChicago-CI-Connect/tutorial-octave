@@ -1,0 +1,13 @@
+universe = vanilla
+log = log/octave.log.$(Cluster)
+error = log/octave.err.$(Cluster).$(Process)
+output = log/octave.out.$(Cluster).$(Process)
+ 
+# Setup Octave path, run the ex2_matrix.octave script
+executable = octave-wrapper.sh
+transfer_input_files = ex2_matrix.octave
+arguments = ex2_matrix.octave
++ProjectName="ConnectTrain"
+ 
+requirements = (HAS_CVMFS =?= TRUE)
+queue 100

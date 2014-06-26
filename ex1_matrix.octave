@@ -1,0 +1,4 @@
+A = rand(40, 40)
+B = A' * A
+[v, d] = eig(A)
+diag(d)

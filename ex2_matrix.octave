@@ -1,0 +1,4 @@
+A = rand(1000,1000)
+B = A' * A
+[v, d] = eig(A)
+diag(d)
