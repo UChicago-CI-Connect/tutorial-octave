@@ -95,7 +95,6 @@ output = log/octave.out.$(Cluster).$(Process)
 executable = octave-wrapper.sh
 transfer_input_files = ex2_matrix.octave
 arguments = ex2_matrix.octave
-+ProjectName="ConnectTrain"
  
 requirements = (HAS_CVMFS_oasis_opensciencegrid_org =?= TRUE)
 queue 100
