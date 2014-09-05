@@ -13,15 +13,22 @@ $ cd osg-octave
 ```
 Testing Octave
 --------------
-Since Octave is installed into CVMFS, it's not available in the normal system paths. We'll need to set up those paths so we can access Octave correctly:
+First, we'll need to set up the system paths so we can access Octave correctly. This is done via OSG's Distributed Environment Modules. To access these modules, enter: 
 ```
-$ source /cvmfs/oasis.opensciencegrid.org/osg/palms/sw/octave/el5/x86_64/default/setup.sh
+$ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash
 ```
+
+Now, we can load the Octave module. We'll first need to load some dependencies as well:
+```
+$ module load fftw/3.3.4 atlas lapack hdf5 qhull pcre SparseSuite glpk
+$ module load octave
+```
+
 Once the path is set up, we can run Octave:
 ```
 $ octave
-GNU Octave, version 3.6.4
-Copyright (C) 2013 John W. Eaton and others.
+GNU Octave, version 3.8.1
+Copyright (C) 2014 John W. Eaton and others.
 This is free software; see the source code for copying conditions.
 There is ABSOLUTELY NO WARRANTY; not even for MERCHANTABILITY or
 FITNESS FOR A PARTICULAR PURPOSE.  For details, type `warranty'.
@@ -40,7 +47,7 @@ $
 ```
 Running Octave code
 -------------------
-Now lets create our Octave script. We'll call it *ex1_matrix.octave*:
+Now let's create our Octave script. We'll call it *ex1_matrix.octave*:
 ```
 A = rand(40, 40)
 B = A' * A
