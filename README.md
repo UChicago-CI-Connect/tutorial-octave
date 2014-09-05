@@ -13,7 +13,7 @@ $ cd osg-octave
 ```
 Testing Octave
 --------------
-First, we'll need to set up the system paths so we can access Octave correctly. This is done via OSG's Distributed Environment Modules. To access these modules, enter: 
+First, we'll need to set up the system paths so we can access Octave correctly. This is done via OSG's [Distributed Environment Modules](https://confluence.grid.iu.edu/display/CON/Distributed+Environment+Modules). To access these modules, enter: 
 ```
 $ source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash
 ```
