@@ -1,4 +1,4 @@
-A = rand(40, 40)
+A = rand(10, 10)
 B = A' * A
 [v, d] = eig(A)
 diag(d)
