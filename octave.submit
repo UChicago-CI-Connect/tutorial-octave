@@ -1,11 +1,8 @@
-Universe = grid
-grid_resource = batch condor dbala@login.ci-connect.uchicago.edu
+Universe = vanilla
 log = log/octave.log.$(Cluster)
 error = log/octave.err.$(Cluster).$(Process)
 output = log/octave.out.$(Cluster).$(Process)
 executable = octave-wrapper.sh
 transfer_input_files = ex2_matrix.octave
 arguments = ex2_matrix.octave
-+ProjectName="uchicago"
-requirements = (HAS_CVMFS =?= TRUE)
 queue 1
