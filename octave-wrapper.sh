@@ -1,6 +1,5 @@
 #!/bin/bash
- 
-  source /cvmfs/oasis.opensciencegrid.org/osg/modules/lmod/5.6.2/init/bash
-  module load fftw/3.3.4 atlas lapack hdf5 qhull pcre SparseSuite glpk octave
+  source /cvmfs/oasis.opensciencegrid.org/osg/palms/sw/octave/el5/x86_64/default/setup.sh
   module load octave 
-  octave $1
+  octave ex1_matrix.octave 
+

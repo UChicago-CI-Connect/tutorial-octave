@@ -1,10 +1,13 @@
-Universe = vanilla
-log = log/octave.log.$(Cluster)
-error = log/octave.err.$(Cluster).$(Process)
-output = log/octave.out.$(Cluster).$(Process)
+Universe = grid
+grid_resource = batch condor dbala@login.ci-connect.uchicago.edu
+
+log = job.log.$(Cluster)
+error = job.err.$(Cluster).$(Process)
+output = job.out.$(Cluster).$(Process)
+ 
 executable = octave-wrapper.sh
-transfer_input_files = ex1_matrix.octave, ex2_matrix.octave
-arguments = ex1_matrix.octave
-queue 1
-arguments = ex2_matrix.octave
+transfer_input_files = ex1_matrix.octave
+
++ProjectName="ConnectTrain"
+requirements = (HAS_CVMFS =?= TRUE)
 queue 1
